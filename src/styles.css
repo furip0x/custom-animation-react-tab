@@ -1,0 +1,355 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src:
+    url('./assets/fonts/SFProDisplay-Medium.woff2') format('woff2'),
+    url('./assets/fonts/SFProDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src:
+    url('./assets/fonts/SFProDisplay-Heavy.woff2') format('woff2'),
+    url('./assets/fonts/SFProDisplay-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src:
+    url('./assets/fonts/SFProDisplay-Bold.woff2') format('woff2'),
+    url('./assets/fonts/SFProDisplay-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src:
+    url('./assets/fonts/SFProDisplay-Regular.woff2') format('woff2'),
+    url('./assets/fonts/SFProDisplay-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  display: block;
+  padding: 0;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f7;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100dvh;
+  margin: 0 auto;
+}
+
+/* FEATURE TABS */
+.feature-tabs-section {
+  width: 100%;
+  background-color: #fbfcfc;
+}
+
+.feature-tabs {
+  display: flex;
+  background-color: #fff;
+}
+
+.features-tab-btn {
+  display: flex;
+  flex: 1 1 301px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 124px;
+  font-size: 20px;
+  font-weight: 500;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  scroll-snap-align: center;
+  transition: all 0.3s;
+}
+
+.features-tab-btn:hover {
+  box-shadow: inset 0 0 0 4px #0381ff;
+}
+
+.features-tab-btn.active {
+  background: rgba(3, 129, 255, 0.03);
+  box-shadow: none;
+}
+
+.features-tab-icon {
+  position: relative;
+  display: flex;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.features-tab-circle {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 111%;
+  transform: rotate(90deg) scaleX(-1);
+}
+
+/* FEATURE TABS CONTENT */
+.feature-contents {
+  display: flex;
+  max-width: 1242px;
+  margin-inline: auto;
+}
+
+.feature-content {
+  width: 100%;
+}
+
+.feature-content-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  min-height: 540px;
+  text-align: right;
+  overflow: hidden;
+}
+
+.feature-content-text {
+  flex: 0 1 510px;
+  align-self: center;
+  order: 1;
+}
+
+.feature-content-title {
+  color: #0381ff;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.feature-content-subtitle {
+  color: #0b122a;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.feature-content-desc {
+  color: #0b122a;
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.feature-content-link {
+  color: #0b122a;
+  font-size: 20px;
+  text-decoration: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.16);
+  padding: 15px 20px;
+}
+
+.feature-content-anim-wrapper {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  flex: 0 0 610px;
+  order: 0;
+}
+
+.feature-content-anim {
+  position: relative;
+}
+
+.phone-sign-signature-left {
+  max-width: 61%;
+  position: absolute;
+  bottom: 13%;
+  left: -27%;
+  z-index: 1;
+}
+
+.phone-sign-signature-right {
+  max-width: 61%;
+  position: absolute;
+  bottom: 32%;
+  right: -24.5%;
+  z-index: 1;
+}
+
+.phone-batch-file1,
+.phone-batch-file2,
+.phone-batch-file3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  z-index: 1;
+}
+
+.phone-batch-file1 {
+  max-width: 83%;
+}
+
+.phone-batch-file2 {
+  max-width: 79%;
+}
+
+.phone-batch-file3 {
+  max-width: 67%;
+  bottom: 3%;
+}
+
+.phone-filters-leftbar,
+.phone-filters-rightbar {
+  position: absolute;
+  bottom: 3%;
+  z-index: 1;
+  max-width: 12%;
+}
+
+.phone-filters-leftbar {
+  left: -7%;
+}
+
+.phone-filters-rightbar {
+  right: -7%;
+}
+
+.phone-export-arrow,
+.phone-export-pdf,
+.phone-export-jpg,
+.phone-export-txt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.phone-export-arrow {
+  max-width: 7%;
+  bottom: 8%;
+  left: -9%;
+}
+
+.phone-export-pdf {
+  max-width: 44%;
+  bottom: 3%;
+  left: -7%;
+}
+
+.phone-export-jpg {
+  max-width: 36%;
+  bottom: 10%;
+  left: 31%;
+}
+
+.phone-export-txt {
+  max-width: 44%;
+  bottom: 1%;
+  left: 65%;
+}
+
+/*MEDIA*/
+@media (max-width: 1320px) {
+  .feature-content-inner {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-tabs-section {
+    padding-top: 40px;
+  }
+  .feature-tabs {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .features-tab-btn {
+    min-width: 301px;
+  }
+  .features-tab-btn:hover {
+    box-shadow: none;
+  }
+  .feature-content-inner {
+    flex-direction: column;
+    min-height: auto;
+    text-align: center;
+  }
+  .feature-content-anim-wrapper {
+    order: 1;
+  }
+  .feature-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 226px;
+    margin-bottom: 26px;
+  }
+  .feature-content-subtitle {
+    margin-bottom: 8px;
+  }
+  .feature-content-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+  .feature-content-link {
+    font-size: 14px;
+    padding: 10px 14px;
+    margin-top: auto;
+  }
+  .feature-content-anim-wrapper {
+    flex: auto;
+    width: 230px;
+    margin-inline: auto;
+  }
+}
