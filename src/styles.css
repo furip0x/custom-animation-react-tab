@@ -303,6 +303,11 @@ button {
 }
 
 @media (max-width: 767px) {
+  .container {
+    display: block;
+    min-height: auto;
+  }
+
   .feature-tabs-section {
     padding-top: 40px;
   }
